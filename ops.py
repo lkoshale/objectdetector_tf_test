@@ -20,11 +20,11 @@ import six
 
 import tensorflow as tf
 
-import box_list
-import box_list_ops
-import standard_fields as fields
-import shape_utils
-import static_shape
+from objectdetector_tf_test import box_list
+from objectdetector_tf_test import box_list_ops
+from objectdetector_tf_test import standard_fields as fields
+from objectdetector_tf_test import shape_utils
+from objectdetector_tf_test import static_shape
 
 
 def expanded_shape(orig_shape, start_dim, num_dims):
