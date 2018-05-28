@@ -537,9 +537,9 @@ def get_box_cords(image,ymin,xmin,ymax,xmax,use_normalized_coordinates=True):
         (left, right, top, bottom) = (xmin * im_width, xmax * im_width,
                                       ymin * im_height, ymax * im_height)
         return (left, right, top, bottom)
-    # else:
-    #     (left, right, top, bottom) = (xmin, xmax, ymin, ymax)
-    #     return (left, right, top, bottom)
+    else:
+        (left, right, top, bottom) = (xmin, xmax, ymin, ymax)
+        return (left, right, top, bottom)
 
 
 def visualize_boxes_and_labels_on_image_array(
@@ -680,7 +680,7 @@ def visualize_boxes_and_labels_on_image_array(
       b_list = []  # list of boxes
       for box, color in box_to_color_map.items():
           ymin, xmin, ymax, xmax = box
-          b_list.append((ymin,xmin,ymax,xmax))
+          b_list.append(get_box_cords(image,ymin,xmin,ymax,xmax,use_normalized_coordinates=use_normalized_coordinates))
 
       # ********************END***********************
     image_pl = get_image_pil(image)
