@@ -601,6 +601,7 @@ def visualize_boxes_and_labels_on_image_array(
   """
   # Create a display string (and color) for every box location, group any boxes
   # that correspond to the same location.
+  global b_list
   box_to_display_str_map = collections.defaultdict(list)
   box_to_color_map = collections.defaultdict(str)
   box_to_instance_masks_map = {}
@@ -641,7 +642,6 @@ def visualize_boxes_and_labels_on_image_array(
               classes[i] % len(STANDARD_COLORS)]
 
 
-
   # Draw all boxes onto image.
   for box, color in box_to_color_map.items():
     ymin, xmin, ymax, xmax = box
@@ -677,15 +677,15 @@ def visualize_boxes_and_labels_on_image_array(
           use_normalized_coordinates=use_normalized_coordinates)
 
       # ******************MY EDIT ********************
-      b_list = []  # list of boxes
-      for box, color in box_to_color_map.items():
-          ymin, xmin, ymax, xmax = box
-          b_list.append(get_box_cords(image,ymin,xmin,ymax,xmax,use_normalized_coordinates=use_normalized_coordinates))
+      # list of boxes
+    b_list = []
+    for box, color in box_to_color_map.items():
+        ymin, xmin, ymax, xmax = box
+        b_list.append(get_box_cords(image,ymin,xmin,ymax,xmax,use_normalized_coordinates=use_normalized_coordinates))
 
       # ********************END***********************
-    image_pl = get_image_pil(image)
-    r_dict = {'image':image,'image_pil':image_pl,'b_list':b_list}
-
+  image_pl = get_image_pil(image)
+  r_dict = {'image':image,'image_pil':image_pl,'b_list':b_list}
   return r_dict
 
 
