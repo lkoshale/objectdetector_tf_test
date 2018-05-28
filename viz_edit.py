@@ -525,6 +525,17 @@ def draw_mask_on_image_array(image, mask, color='red', alpha=0.4):
   np.copyto(image, np.array(pil_image.convert('RGB')))
 
 
+def get_box_cords(image,ymin,xmin,ymax,xmax,use_normalized_coordinates=True):
+    image_pil = Image.fromarray(np.uint8(image)).convert('RGB')
+    im_width, im_height = image_pil.size
+    if use_normalized_coordinates:
+        (left, right, top, bottom) = (xmin * im_width, xmax * im_width,
+                                      ymin * im_height, ymax * im_height)
+    else:
+        (left, right, top, bottom) = (xmin, xmax, ymin, ymax)
+
+    return (left, right, top, bottom)
+
 def visualize_boxes_and_labels_on_image_array(
     image,
     boxes,
@@ -623,13 +634,7 @@ def visualize_boxes_and_labels_on_image_array(
           box_to_color_map[box] = STANDARD_COLORS[
               classes[i] % len(STANDARD_COLORS)]
 
-    #******************MY EDIT ********************
-    b_list = [] #list of boxes
-    for box, color in box_to_color_map.items():
-        ymin, xmin, ymax, xmax = box
-        b_list.append((ymin, xmin, ymax, xmax))
 
-    #********************END***********************
 
   # Draw all boxes onto image.
   for box, color in box_to_color_map.items():
@@ -664,6 +669,14 @@ def visualize_boxes_and_labels_on_image_array(
           color=color,
           radius=line_thickness / 2,
           use_normalized_coordinates=use_normalized_coordinates)
+
+      # ******************MY EDIT ********************
+      b_list = []  # list of boxes
+      for box, color in box_to_color_map.items():
+          ymin, xmin, ymax, xmax = box
+          b_list.append( get_box_cords(image,ymin,xmin,ymax,xmax,use_normalized_coordinates=use_normalized_coordinates) )
+
+      # ********************END***********************
 
     r_dict = {'image':image,'b_list':b_list}
 
