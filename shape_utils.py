@@ -17,7 +17,7 @@
 
 import tensorflow as tf
 
-from objectdetector_tf_test import static_shape
+import static_shape
 
 
 def _is_tensor(t):

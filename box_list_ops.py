@@ -25,8 +25,8 @@ BoxList are retained unless documented otherwise.
 """
 import tensorflow as tf
 
-from objectdetector_tf_test import box_list
-from objectdetector_tf_test import shape_utils
+import box_list
+import shape_utils
 
 
 class SortOrder(object):

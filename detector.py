@@ -14,13 +14,13 @@ from PIL import Image
 # This is needed since the notebook is stored in the object_detection folder.
 # sys.path.append("..")
 
-from objectdetector_tf_test import ops as utils_ops
+import ops as utils_ops
 
 if tf.__version__ < '1.4.0':
   raise ImportError('Please upgrade your tensorflow installation to v1.4.* or later!')
-from objectdetector_tf_test import label_map_util
+import label_map_util
 
-from objectdetector_tf_test import visualization_utils as vis_util
+import visualization_utils as vis_util
 from matplotlib import pyplot as plt
 
 # What model to download.
