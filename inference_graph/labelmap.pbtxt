@@ -1,4 +1,41 @@
 item {
   id: 1
+  name: 'reptile_food'
+  display_name: 'reptile_food'
+}
+
+item {
+  id: 2
+  name: 'brush'
+  display_name: 'brush'
+}
+
+item {
+  id: 3
+  name: 'bowl'
+  display_name: 'bowl'
+}
+
+item {
+  id: 4
   name: 'bed'
+  display_name: 'bed'
+}
+
+item {
+  id: 5
+  name: 'collar'
+  display_name: 'collar'
+}
+
+item {
+  id: 6
+  name: 'dog'
+  display_name: 'dog'
+}
+
+item {
+  id: 7
+  name: 'crate'
+  display_name: 'crate'
 }
