@@ -39,3 +39,131 @@ item {
   name: 'crate'
   display_name: 'crate'
 }
+
+item {
+  id: 8
+  name: 'trimmer'
+  display_name: 'trimmer'
+}
+
+
+item {
+  id: 8
+  name: 'trimmer'
+  display_name: 'trimmer'
+}
+
+item {
+  id: 9
+  name: 'bird'
+  display_name: 'bird'
+}
+
+item {
+  id: 10
+  name: 'bird_feeder'
+  display_name: 'bird_feeder'
+}
+
+item {
+  id: 11
+  name: 'plants'
+  display_name: 'plants'
+}
+
+item {
+  id: 12
+  name: 'tag'
+  display_name: 'tag'
+}
+
+
+item {
+  id: 13
+  name: 'fish_tank'
+  display_name: 'fish_tank'
+}
+
+item {
+  id: 14
+  name: 'fish'
+  display_name: 'fish'
+}
+
+item {
+  id: 15
+  name: 'scissor'
+  display_name: 'scissor'
+}
+
+item {
+  id: 16
+  name: 'hamster'
+  display_name: 'hamster'
+}
+
+item {
+  id: 17
+  name: 'carrier'
+  display_name: 'carrier'
+}
+
+item {
+  id: 18
+  name: 'cat'
+  display_name: 'cat'
+}
+
+item {
+  id: 19
+  name: 'book'
+  display_name: 'book'
+}
+
+item {
+  id: 20
+  name: 'shampoo'
+  display_name: 'shampoo'
+}
+
+item {
+  id: 21
+  name: 'food_packet'
+  display_name: 'food_packet'
+}
+
+item {
+  id: 22
+  name: 'harness'
+  display_name: 'harness'
+}
+
+item {
+  id: 23
+  name: 'spray'
+  display_name: 'spray'
+}
+
+item {
+  id: 24
+  name: 'toys'
+  display_name: 'toys'
+}
+
+item {
+  id: 25
+  name: 'food'
+  display_name: 'food'
+}
+
+item {
+  id: 26
+  name: 'muzzle'
+  display_name: 'muzzle'
+}
+
+item {
+  id: 27
+  name: 'tortoise'
+  display_name: 'tortoise'
+}
